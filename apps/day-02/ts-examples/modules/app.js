@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var zip_code_validator_1 = require("./validators/zip-code-validator");
+var contains_space_validator_1 = require("./validators/contains-space-validator");
+var result;
+var myValidator = new zip_code_validator_1.ZipCodeValidator();
+result = myValidator.isAcceptable('123');
+console.log('  result =', result);
+result = myValidator.isAcceptable('12345');
+console.log('  result =', result);
+myValidator = new contains_space_validator_1["default"]();
+result = myValidator.isAcceptable('Bengaluru');
+console.log('  result =', result);
+result = myValidator.isAcceptable('New Delhi');
+console.log('  result =', result);
