@@ -1,20 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { ConsoleReporter } from 'jasmine';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
+  productId: number = 1;
   productName: string = 'Dell Latitude';
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  onSave() {
-    console.log('Save button clicked');
-  }
+  productDescription: string = 'Best for business use';
+  productPrice: number = 45000;
+  productIsAvailable: boolean = false;
 }
