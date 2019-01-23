@@ -58,30 +58,6 @@
   </div>
 
   <div class="col-md-8">
-    <div class="card bg-light mb-2" *ngFor="let product of products">
-      <h4 class="card-header">{{ product.name }}</h4>
-      <div class="card-body">
-        <p class="card-text"
-          [ngStyle]="{color: product.isAvailable ? 'blue' : 'orange'}"
-        >
-          {{ product.description }}
-        </p>
-        <p class="card-text"><strong>Price:</strong> <em>{{ product.price | currency : 'INR' : 'code' }}</em></p>
-        <p class="card-text">
-          <strong>Available?</strong>
-          <em class="badge"
-            [ngClass]="{ 'badge-success': product.isAvailable, 'badge-danger': !product.isAvailable }"
-          >
-            {{ product.isAvailable ? 'Yes' : 'No' }}
-          </em>
-        </p>
-      </div>
-      <div class="card-footer">
-        <button type="button" class="btn btn-warning btn-sm">
-          Delete
-        </button>
-      </div>
-    </div>
+    <app-product-detail [product]="p" *ngFor="let p of products"></app-product-detail>
   </div>
 </div>
-

@@ -42,5 +42,12 @@ export class ProductsComponent {
     this.product = new Product();
 
     this.showMessage = true;
+
+    // const obj = this;
+
+    setTimeout(() => {
+      // obj.showMessage = false;
+      this.showMessage = false;
+    }, 4000);
   }
 }
