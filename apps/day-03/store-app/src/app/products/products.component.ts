@@ -8,9 +8,6 @@ import { Product } from '../models/product';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
-  showMessage: boolean = false;
-  product: Product = new Product();
-
   products: Product[] = [
     {
       id: 1,
@@ -35,19 +32,7 @@ export class ProductsComponent {
     }
   ];
 
-  onSubmit() {
-    console.log('form submitted');
-    console.log(this.product);
-    this.products.unshift(this.product);
-    this.product = new Product();
-
-    this.showMessage = true;
-
-    // const obj = this;
-
-    setTimeout(() => {
-      // obj.showMessage = false;
-      this.showMessage = false;
-    }, 4000);
+  onProductCreated(product: Product) {
+    this.products.unshift(product);
   }
 }
