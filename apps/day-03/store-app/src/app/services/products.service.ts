@@ -1,9 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 import { Product } from '../models/product';
 
 @Injectable()
 export class ProductsService {
+  productCreated = new EventEmitter<Product>();
+
   private products: Product[] = [
     {
       id: 1,
@@ -36,10 +38,8 @@ export class ProductsService {
   addProduct(product: Product) {
     console.log('ProductsService.addProduct() invoked.');
     this.products.unshift(product);
+    this.productCreated.emit(product);
   }
 
 }
 
-// {
-//   providedIn: 'root'
-// }
