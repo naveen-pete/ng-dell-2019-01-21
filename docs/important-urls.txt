@@ -35,3 +35,6 @@ Testing HttpClient
 
 Introduction to Webpack (JavaScript Meetup Youtube Channel)
 - https://youtu.be/fCw98k3QQ90
+
+Angular Modularity
+- https://youtu.be/sDC3QwuwQH0
